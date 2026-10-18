@@ -13,5 +13,5 @@ class Profile(models.Model):
 
 class Avatar(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='avatars')
-    image = models.ImageField(upload_to='avatars/')
+    image = models.FileField(upload_to='avatars/') 
     uploaded_at = models.DateTimeField(auto_now_add=True)
